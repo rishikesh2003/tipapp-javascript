@@ -1,129 +1,207 @@
-body {
-  font-family: Roboto;
-  background: #8E0E00;
-  /* fallback for old browsers */
-  background: -webkit-linear-gradient(to left, #8E0E00, #1F1C18);
-  /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(to left, #8E0E00, #1F1C18);
-  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-}
-
-#container {
-  height: 525px;
-  width: 360px;
-  margin: 100px auto;
-  background: #f7f7f7;
-  box-shadow: 0 0 3px rgba(0, 0, 0, 0.1);
-  border-radius: 20px;
-  -webkit-border-radius: 20px;
-  -moz-border-radius: 20px;
-}
-
-h1 {
-  background: #1F030C;
-  color: white;
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap");
+* {
   margin: 0;
-  padding: 10px 100px;
-  text-transform: uppercase;
-  font-size: 18px;
-  font-weight: normal;
-  border-top-left-radius: 20px;
-  border-top-right-radius: 20px;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
 }
 
-p {
-  padding-left: 20px;
+html {
+  font-size: 64.5%;
 }
 
-form input[type="text"] {
-  width: 90px;
+section {
+  width: 100%;
+  min-height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background-image: linear-gradient(-45deg, #005EAA, #A0D870);
 }
 
-input {
-  padding-left: 20px;
-}
-
-#billamt {
-  font-size: 14px;
-  /*color: #2980b9;*/
-  color: red;
-  background-color: #f7f7f7;
-  width: 60%;
-  padding: 5px 5px 8px 8px;
-}
-
-#billamt:focus {
-  background: #fff;
-  border: 3px solid #2980b9;
-  outline: none;
-}
-
-#peopleamt {
-  width: 60%;
-  padding: 5px 5px 8px 8px;
-  margin-left: 20px;
-  color: red;
-  background-color: #f7f7f7;
-  font-size: 14px;
-}
-
-.dollarSign {
-  display: inline;
-}
-
-#serviceQual {
-  padding: 13px 13px 20px 20px;
-  margin-left: 20px;
-  font-size: 25px;
-}
-
-button {
-  text-transform: uppercase;
-  font-weight: bold;
-  display: block;
-  margin: 30px auto;
-  background: #AD133A;
+div.main {
+  width: 36rem;
+  min-height: 52.5rem;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#FFFFFF80), to(#FFFFFF30));
+  background-image: linear-gradient(to bottom, #FFFFFF80, #FFFFFF30);
+  padding: 4rem 2rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-shadow: 0 0 8px #00000020, 0 1.5rem 10px #00000020;
+          box-shadow: 0 0 8px #00000020, 0 1.5rem 10px #00000020;
   border-radius: 5px;
-  width: 200px;
-  height: 50px;
-  font-size: 17px;
-  color: white;
 }
 
-button:hover {
-  background: #4c2827;
-  border-bottom-color: #111;
+div.main h1 {
+  color: #FFFFFF;
+  font-size: 3rem;
+  margin-bottom: 2rem;
 }
 
-button:active {
-  position: relative;
-  top: 1px;
+div.main div.calculator {
+  padding: 2rem 0;
 }
 
-#totalTip {
-  font-size: 30px;
-  margin-top: 5px;
-  text-align: center;
+div.main div.calculator form p.question {
+  width: 100%;
+  font-size: 1.6rem;
 }
 
-#totalTip:before {
-  content: "Tip amount";
-  font-size: 20px;
-  font-weight: bold;
-  display: block;
-  text-transform: uppercase;
+div.main div.calculator form div.CurrencySelectAmount {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-bottom: 2rem;
+  margin-top: 0.5rem;
 }
 
-#totalTip sup {
-  font-size: 20px;
-  top: -18px;
-}
-
-#totalTip small {
-  font-size: 20px;
-  font-weight: bold;
-  display: block;
-}
-#calculate{
+div.main div.calculator form div.CurrencySelectAmount .currencyselect {
+  padding: 0.5rem;
+  outline: 0;
+  color: black;
   cursor: pointer;
+  width: 20%;
+  display: inline;
+  border-radius: 0.5rem;
+}
+
+div.main div.calculator form div.CurrencySelectAmount input.billInput {
+  width: 79%;
+  border: none;
+  outline: none;
+  display: inline;
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+}
+
+div.main div.calculator form div.service {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-bottom: 2rem;
+  margin-top: 0.5rem;
+}
+
+div.main div.calculator form div.service .serviceQuality {
+  padding: 0.5rem;
+  outline: 0;
+  color: black;
+  cursor: pointer;
+  width: 100%;
+  display: inline;
+  border-radius: 0.5rem;
+}
+
+div.main div.calculator form div.peopleNumber {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-bottom: 2rem;
+  margin-top: 0.5rem;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+div.main div.calculator form div.peopleNumber .peopleNumberInput {
+  width: 100%;
+  border: none;
+  outline: none;
+  display: inline;
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+}
+
+div.main div.calculator form div.peopleNumber #calculate {
+  margin-top: 2rem;
+  padding: 0.8rem;
+  border: none;
+  color: #000;
+  background-color: #FFF;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+div.main div.calculator form div.peopleNumber #calculate:hover {
+  background-image: linear-gradient(45deg, #005EAA, #A0D870);
+  -webkit-box-shadow: 0 0 8px #00000020, 0 1rem 10px #00000020;
+          box-shadow: 0 0 8px #00000020, 0 1rem 10px #00000020;
+  color: #FFFFFF;
+}
+
+div.main div.tipValue {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+div.main div.tipValue sup {
+  font-size: 1.8rem;
+  color: #FFF;
+}
+
+div.main div.tipValue span.Value {
+  width: 100%;
+  font-size: 2.8rem;
+  color: #FFFFFF;
+}
+
+div.main div.tipValue small.each {
+  color: #FFFFFF;
+  font-size: 1.4rem;
+}
+
+@media (max-width: 353px) {
+  div.main {
+    width: 100%;
+  }
+  div.main h1 {
+    text-align: center;
+  }
 }
